@@ -96,6 +96,46 @@ body {
     max-width: 450px;
 }
 
+.loading{
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    
+    & .baseCarregamento{
+        width: 100%;
+        background-color: transparent;
+        border: 1px solid #fefefe;
+        border-radius: 4px;
+        position: relative;
+        height: 10px;
+
+    }
+    & .carregamento{
+        width: 0%;
+        background-color: #f2f2f2;
+        border-radius: 4px;
+        height: 8px;
+        position: absolute;
+        animation: carregar 5s linear infinite;
+
+
+    }
+
+}
+
+@keyframes carregar {
+    to{
+
+        width: 100%;
+
+    }
+    
+}
+
+
+
 /* CONTEUDO PRINCIPAL */
 
 .container {
@@ -122,10 +162,16 @@ body {
 .logo {
     border-radius: 50%;
     max-width: 250px;
+    transform: translateY(0);
+    opacity: 0;
+    animation: toUp 1s forwards;
 }
 
 .title {
     font-size: 18px;
+    transform: translateY(0);
+    opacity: 0;
+    animation: toUp 0.8s forwards;
 
 }
 
@@ -138,13 +184,16 @@ body {
     margin-block: 50px;
     gap: 20px;
     font-size: 16px;
+    transform: translateY(0);
+    opacity: 0;
+    animation: toUp 1.5s forwards;
 }
 
 .buttons a, .btn {
     background-color: #f2f2f2;
     width: 100%;
     padding: 25px;
-    ;
+    
     text-decoration: none;
     color: #d60b52;
     text-align: center;
@@ -159,6 +208,7 @@ body {
     background-color: #d60b52;
     border: 1px solid #f2f2f2;
     color: #f2f2f2;
+
 }
 
 .shake {
@@ -173,6 +223,9 @@ footer {
 
     color: #f2f2f29a;
     font-size: 20px;
+    transform: translateY(0);
+    opacity: 0;
+    animation: toUp 1.5s forwards;
 }
 
 
@@ -196,11 +249,18 @@ footer {
     
 }
 
-@keyframes moverDireita {
+@keyframes toUp {
 
+    0%{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100%{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
 
-    
-}
 
 @media screen and (min-width: 320px) and (max-width: 1024px) {
     body {
