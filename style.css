@@ -68,6 +68,10 @@ body {
     cursor: pointer;
 }
 
+.modalBreve{
+    background-color: #d60b52cb !important;
+    color: #f2f2f2;
+}
 .closeModal img{
     width: 70px;
     filter: invert(1);
