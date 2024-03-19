@@ -28,7 +28,7 @@ body {
 /* MODAL */
 
 .modal{
-    background-color: #f2f2f218;
+    background-color: #d60b52;
     backdrop-filter: blur(50px);
     position: absolute;
     z-index: 1;
@@ -44,7 +44,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid #f2f2f231;
+    border: 1px solid #d60b52;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     gap: 20px;
     animation: scale 0.3s forwards;
